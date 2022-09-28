@@ -1,0 +1,29 @@
+// @import './utils/variables';
+// @import './utils/placeholders';
+// @import './utils/mixins';
+// @import './utils/visualy-hidden';
+@import './utils/module';
+
+// @import './base/common';
+// @import './base/reset';
+@import './base/module';
+
+// @import './components/section';
+// @import './components/container';
+// @import './components/titles';
+// @import './components/main-button';
+// @import './components/social-networks';
+// @import './components/logo';
+@import './components/module';
+
+// @import './layout/header';
+// @import './layout/hero';
+// @import './layout/benefits';
+// @import './layout/what-we-do';
+// @import './layout/team';
+// @import './layout/clients';
+// @import './layout/footer';
+// @import './layout/modal-window';
+// @import './layout/portfolio-buttons';
+// @import './layout/cards-portfolio';
+@import './layout/module';

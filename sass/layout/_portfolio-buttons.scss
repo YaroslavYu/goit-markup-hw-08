@@ -1,0 +1,43 @@
+.buttons-portfolio-list {
+  display: flex;
+  column-gap: 8px;
+  margin-bottom: 50px;
+}
+
+.buttons-portfolio-list__item:first-child {
+  margin-left: auto;
+}
+
+.buttons-portfolio-list__item:last-child {
+  margin-right: auto;
+}
+
+.buttons-portfolio-list__button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  cursor: pointer;
+  background: var(--buttons-portfolio-background-team-color);
+  border-radius: 4px;
+  border: none;
+  padding: 4px 20px;
+
+  transition: color var(--animation-duration-and-function),
+    background-color var(--animation-duration-and-function),
+    box-shadow var(--animation-duration-and-function);
+}
+
+.buttons-portfolio-list__button:hover,
+.buttons-portfolio-list__button:focus {
+  color: var(--footer-logo-hero-mainbackgr-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.buttons-portfolio-list__button_current {
+  color: var(--footer-logo-hero-mainbackgr-color);
+  background-color: var(--accent-color);
+}

@@ -1,0 +1,28 @@
+.logo {
+  font-family: 'raleway', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+}
+
+.page-header__logo {
+  color: var(--header-logo-color);
+  margin-right: 93px;
+}
+
+.page-footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--footer-logo-hero-mainbackgr-color);
+}
+
+.logo__first-part-logo {
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.11;
+  }
+}

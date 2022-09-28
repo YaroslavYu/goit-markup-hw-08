@@ -1,0 +1,34 @@
+@media screen and (max-width: 1199px) {
+ .what-we-do-section {
+display: none;
+}
+}
+
+.section_no-padding-top {
+  padding-top: 0;
+}
+
+.list-what-we-do {
+  display: flex;
+  column-gap: 30px;
+}
+
+.list-what-we-do__item {
+  position: relative;
+}
+
+.list-what-we-do__wrapper-text {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+
+  background-color: var(--background-whatwedo-text);
+
+  @extend %flex-centered;
+}
+
+.list-what-we-do__text {
+  color: var(--footer-logo-hero-mainbackgr-color);
+}
+
