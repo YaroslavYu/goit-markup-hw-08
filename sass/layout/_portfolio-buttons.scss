@@ -1,15 +1,8 @@
 .buttons-portfolio-list {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 8px;
-  margin-bottom: 50px;
-}
-
-.buttons-portfolio-list__item:first-child {
-  margin-left: auto;
-}
-
-.buttons-portfolio-list__item:last-child {
-  margin-right: auto;
+  margin-bottom: 40px;
 }
 
 .buttons-portfolio-list__button {
@@ -40,4 +33,31 @@
 .buttons-portfolio-list__button_current {
   color: var(--footer-logo-hero-mainbackgr-color);
   background-color: var(--accent-color);
+}
+
+@media screen and (max-width: 767px) {
+  .buttons-portfolio-list {
+    max-width: 326px;
+    row-gap: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .buttons-portfolio-list {
+    margin-bottom: 30px;
+  }
+
+  .buttons-portfolio-list__item:first-child {
+    margin-left: auto;
+  }
+
+  .buttons-portfolio-list__item:last-child {
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .buttons-portfolio-list {
+    margin-bottom: 50px;
+  }
 }

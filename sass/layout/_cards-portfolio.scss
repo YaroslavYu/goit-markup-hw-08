@@ -1,11 +1,12 @@
 .portfolio-cards-list {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 30px;
 }
 
 .portfolio-cards-list__item {
-  width: calc((100% - 60px) / 3);
+  width: 100%;
 }
 
 .portfolio-cards-list__link {
@@ -66,4 +67,21 @@
 
 .portfolio-cards-list__text-wrapper {
   padding: 20px 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-cards-list {
+    flex-direction: row;
+  }
+
+  .portfolio-cards-list__item {
+    display: flex;
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-cards-list__item {
+    width: calc((100% - 60px) / 3);
+  }
 }

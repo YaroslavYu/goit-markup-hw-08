@@ -94,3 +94,17 @@
   margin-right: 10px;
   fill: currentColor;
 }
+
+.main-nav__list,
+.page-header__contacts-list {
+  display: none;
+}
+
+.page-header__mobile-menu-place {
+  @extend %flex-centered;
+}
+
+
+@media screen and (min-width: 768px) {
+  
+}
