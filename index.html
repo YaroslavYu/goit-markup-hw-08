@@ -54,15 +54,26 @@
         </li>
       </ul>
 
-      <button type="button" class="page-header__mobile-menu-button  js-open-menu js-menu-container">
-        <svg class="page-header__mobile-menu-place" width="40" height="40" aria-label="Перемикач мобільного меню">
-          <use class="page-header__mobile-menu-icon-line" href="./images/icons.svg#icon-mobile-menu"></use>
-          <use class="page-header__mobile-menu-icon-close" href="./images/icons.svg#icon-close-mobile-menu"></use>
+      <button type="button" class="page-header__mobile-menu-button js-open-menu no-scroll-open">
+        <svg class="page-header__mobile-menu-place" width="40" height="40" aria-label="Відкрити мобільне меню">
+          <use class="page-header__mobile-menu-icon-line " href="./images/icons.svg#icon-mobile-menu"></use>
+          <!-- <use class="page-header__mobile-menu-icon-close " href="./images/icons.svg#icon-close-mobile-menu"></use> -->
         </svg>
       </button>
 
 
-      <div class="mobile-menu  js-menu-container">
+    </div>
+
+    <div class="backdrop-mobile-menu  js-menu-container">
+      <div class="mobile-menu ">
+
+        <button type="button" class="mobile-menu__close-menu-button js-close-menu no-scrolll-close">
+          <svg class="page-header__mobile-menu-place" width="40" height="40" aria-label="Закрити мобільне меню">
+            <!-- <use class="page-header__mobile-menu-icon-line " href="./images/icons.svg#icon-mobile-menu"></use> -->
+            <use class="page-header__mobile-menu-icon-close " href="./images/icons.svg#icon-close-mobile-menu"></use>
+          </svg>
+        </button>
+
         <nav class="main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -688,7 +699,7 @@
   </div>
 
   <script src="./js/modal.js"></script>
-  <!-- <script src="./js/mobile-menu.js"></script> -->
+  <!-- <script src="./js/no-scroll-body.jss"></script> -->
   <script src="./js/mobile-menu-rep.js"></script>
 </body>
 

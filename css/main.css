@@ -237,41 +237,46 @@ ul {
 .page-header__contacts-list {
     display: none;
   }
-  .page-header__mobile-menu-button {
+  .page-header__mobile-menu-button,
+.mobile-menu__close-menu-button {
     position: absolute;
     top: 10px;
     right: 15px;
-    z-index: 3;
     width: 40px;
     height: 40px;
     border: none;
     background-color: transparent;
   }
   .page-header__mobile-menu-button:hover,
-.page-header__mobile-menu-button:focus {
+.page-header__mobile-menu-button:focus,
+.mobile-menu__close-menu-button:hover,
+.mobile-menu__close-menu-button:focus {
     fill: var(--accent-color);
   }
-  .page-header__mobile-menu-icon-close {
-    display: none;
-  }
-  .is-open .page-header__mobile-menu-icon-close {
+  .is-open {
     display: block;
   }
-  .is-open .page-header__mobile-menu-icon-line {
+  .backdrop-mobile-menu {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: var(--backdrop-color);
+    overflow-y: scroll;
+  }
+  .is-open {
+    display: block;
   }
   .mobile-menu {
-    display: none;
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 2;
+    width: 480px;
+    left: 50%;
+    transform: translate(-50%);
     padding: 48px 40px;
     background-color: var(--footer-logo-hero-mainbackgr-color);
-  }
-  .page-header__mobile-menu-button.is-open + .mobile-menu {
-    display: block;
   }
   .mobile-menu .main-nav {
     margin-bottom: 306px;
@@ -309,7 +314,16 @@ ul {
   }
   .social-netw-mobile-menu-list {
     display: flex;
-    column-gap: 20px;
+  }
+  .social-netw-mobile-menu-list__item {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .social-netw-mobile-menu-list__item:first-child {
+    padding-left: 0;
+  }
+  .social-netw-mobile-menu-list__item:last-child {
+    padding-right: 0;
   }
   .social-netw-mobile-menu-list__link {
     font-weight: 500;
@@ -317,6 +331,31 @@ ul {
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: var(--accent-color);
+  }
+  .social-netw-mobile-menu-list__item:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+@media screen and (max-width: 480px) {
+  .mobile-menu {
+    width: 100%;
+    padding: 10vw 8vw;
+  }
+  .contacts-list__link_big-text {
+    font-size: calc(34px - 1vw);
+  }
+  .social-netw-mobile-menu-list__item {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .social-netw-mobile-menu-list__item:first-child {
+    padding-left: 0;
+  }
+  .social-netw-mobile-menu-list__item:last-child {
+    padding-right: 0;
+  }
+  .social-netw-mobile-menu-list__link {
+    font-size: calc(18px - 1vw);
   }
 }
 @media screen and (min-width: 768px) {
@@ -377,8 +416,8 @@ ul {
     align-items: center;
     color: inherit;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     transition: color var(--animation-duration-and-function);
   }
@@ -403,6 +442,8 @@ ul {
     column-gap: 30px;
   }
   .contacts-list__link {
+    font-size: 14px;
+    line-height: 1.14;
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -451,14 +492,11 @@ ul {
   .hero__title {
     width: 360px;
   }
-  .hero {
-    max-width: 480px;
-  }
 }
 @media screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-tablet.jpg");
-    max-width: 768px;
+    max-width: 1200px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
