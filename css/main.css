@@ -342,7 +342,7 @@ ul {
     padding: 10vw 8vw;
   }
   .contacts-list__link_big-text {
-    font-size: calc(34px - 1vw);
+    font-size: calc(30px + 0.2vw);
   }
   .social-netw-mobile-menu-list__item {
     padding-left: 2vw;
@@ -355,7 +355,7 @@ ul {
     padding-right: 0;
   }
   .social-netw-mobile-menu-list__link {
-    font-size: calc(18px - 1vw);
+    font-size: calc(15px + 0.1vw);
   }
 }
 @media screen and (min-width: 768px) {
