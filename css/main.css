@@ -1027,7 +1027,7 @@ ul {
   pointer-events: none;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 480px) {
   .modal-window {
     max-width: 450px;
   }
